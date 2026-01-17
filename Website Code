@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Alejandra Meza</title> </head>
+<button type="button">About</button>
+<button type="button">Research</button>
+<button type="button">Outreach</button>
+<button type="button">CV</button>
+<body>
+    <h1>Welcome!</h1>
+    <p>Undergraduate at UC Berkeley</p>
+</body>
+</html>
