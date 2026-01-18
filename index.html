@@ -49,6 +49,15 @@
 #typewriter {
   font-weight: 500;
 }
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
 </style>
 </head>
     
@@ -67,7 +76,7 @@
     <button type="button">CV</button>
   </div>
 
-<h1 id="typewriter"></h1>
+<h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
 
 <div class="video-row">
   <!-- <video autoplay muted playsinline preload="auto">
@@ -86,11 +95,11 @@
 <script>
   const text = "Hi, I'm Alejandra";
   let i = 0;
-  const speed = 150; // milliseconds per letter
+  const speed = 75;
 
   function typeWriter() {
     if (i < text.length) {
-      document.getElementById("typewriter").innerHTML += text.charAt(i);
+      document.getElementById("typed").textContent += text.charAt(i);
       i++;
       setTimeout(typeWriter, speed);
     }
@@ -98,5 +107,6 @@
 
   typeWriter();
 </script>
+    
 </body>
 </html>
