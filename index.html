@@ -51,16 +51,19 @@
 .video-panel {
   width: 35vw;
   max-width: 520px;
+  height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .video-panel video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   height: 100vh;
-  width: auto;
-  transform: rotate(90deg);   /* make vertical */
-  transform-origin: center;
-  display: block;
-  margin: 0 auto;
+  width: 100vh;              /* key: gives room after rotation */
+  transform: translate(-50%, -50%) rotate(90deg);
+  object-fit: cover;
 }
 
 .right-panel {
