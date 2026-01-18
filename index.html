@@ -5,7 +5,7 @@
     <style>
   body {
       background-color: #000000; /* black */
-      color: #8B008B;            /* dark magenta text */
+      color: #FFF7AB;            /* bright yellow */
       margin: 0;
       padding: 0;
       text-align: center;       /* center text horizontally */
@@ -52,8 +52,23 @@
 <button type="button">Research</button>
 <button type="button">Outreach</button>
 <button type="button">CV</button>
+<script>
+  const text = "Hi, I'm Alejandra";
+  let i = 0;
+  const speed = 100; // milliseconds per letter
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typewriter").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  typeWriter();
+</script>
 <body>
-    <h1>Welcome!</h1>
+    <h1 id="typewriter"></h1>
 
 <div class="video-row">
   <!-- <video autoplay muted playsinline preload="auto">
