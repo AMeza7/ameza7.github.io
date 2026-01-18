@@ -22,15 +22,15 @@
     .linkedin-btn:hover {
       background-color: #70C9CF;
     }
+.page {
+  display: flex;
+  height: 100vh;
+}
 
-    .headshot {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #8CF8FF;
-      margin-bottom: 25px;
-    }
+.video-panel {
+  width: 40vw;
+  height: 100vh;
+}
 
     body {
       background-color: #000000;
@@ -59,11 +59,6 @@
       font-weight: bold;
     }
 
-    .hero-text {
-      margin-top: 60px;
-      max-width: 700px;
-      text-align: left;
-    }
 
     #typewriter {
       font-weight: 500;
@@ -97,10 +92,48 @@
       gap: 20px;
       align-items: center;
     }
+  /* keep nav at top-right area (already handled by right-panel) */
+.about-row {
+  margin-top: 120px;           /* adjust to match index.html hero spacing */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.about-left {
+  flex: 1;
+  text-align: left;
+}
+
+.about-right {
+  width: 220px;                /* controls the right column width */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* headshot polish for right column */
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #8CF8FF;
+  margin: 0;
+  flex-shrink: 0;
+}
+
   </style>
 </head>
 
 <body>
+
+<div class="page">
+  <!-- Empty left column to match index.html spacing -->
+  <div class="video-panel"></div>
+
   <div class="right-panel">
     <div class="nav">
       <a href="index.html"><button>Home</button></a>
@@ -121,17 +154,22 @@
       </a>
     </div>
 
-    <div class="hero-text">
-      <img src="Headshot.jpg" alt="Alejandra Meza headshot" class="headshot">
-
-      <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
-      <p class="intro">
-        Hi, I’m Alejandra. I grew up in Santa Cruz, CA and I’m currently a
-        Physics & Astrophysics undergraduate at UC Berkeley working on
-        stellar dynamics and common envelope evolution in multiple-star systems.
-      </p>
-    </div>
+<div class="about-row">
+  <div class="about-left">
+    <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
+    <p class="intro">
+      Hi, I’m Alejandra. I grew up in Santa Cruz, CA and I’m currently a
+      Physics & Astrophysics undergraduate at UC Berkeley working on
+      stellar dynamics and common envelope evolution in multiple-star systems.
+    </p>
   </div>
+
+  <div class="about-right">
+    <img src="Headshot.jpg" alt="Alejandra Meza headshot" class="headshot">
+  </div>
+</div>
+    </div> <!-- closes right-panel -->
+</div>   <!-- closes page -->
 
   <script>
     const text = "About Me";
