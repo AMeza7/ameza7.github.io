@@ -92,6 +92,7 @@
       gap: 20px;
       align-items: center;
     }
+  
   /* keep nav at top-right area (already handled by right-panel) */
 .about-row {
   margin-top: 120px;
@@ -104,6 +105,22 @@
   margin-left: -40vw;
 
   justify-content: flex-start;
+}
+
+.about-with-photo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-headshot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8CF8FF;
+  margin-bottom: 8px;
 }
 
 .about-left {
@@ -140,6 +157,7 @@
   <div class="video-panel"></div>
   <div class="right-panel">
     <div class="nav">
+
       <a href="index.html"><button>Home</button></a>
       <a href="about.html"><button>About</button></a>
       <a href="research.html"><button>Research</button></a>
@@ -158,19 +176,20 @@
       </a>
     </div>
 
+
+
 <div class="about-row">
-  <div class="about-left">
-    <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
-    <p class="intro">
+<div class="about-left">
+<img src="headshot.jpg" class="headshot" style="margin: 0 auto 25px auto; display: block;">
+  <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
+  <p class="intro">
       Hi, I’m Alejandra. I grew up in Santa Cruz, CA and I’m currently a
       Physics & Astrophysics undergraduate at UC Berkeley working on
       stellar dynamics and common envelope evolution in multiple-star systems.
     </p>
   </div>
 
-  <div class="about-right">
-    <img src="headshot.jpg" alt="Alejandra Meza headshot" class="headshot">
-  </div>
+
 </div>
     </div> <!-- closes right-panel -->
 </div>   <!-- closes page -->
