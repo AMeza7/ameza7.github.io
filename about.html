@@ -1,123 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    <title>About</title>
-    <style>
-.linkedin-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #8CF8FF;
-  color: #000000;
-  width: 60px;
-  height: 52px;
-  font-size: 26px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 2px;
-  font-family: "Courier New", Courier, monospace;
-  transition: background-color 0.2s ease;
-}
+  <title>About</title>
+  <style>
+    .linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #8CF8FF;
+      color: #000000;
+      width: 60px;
+      height: 52px;
+      font-size: 26px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 2px;
+      font-family: "Courier New", Courier, monospace;
+      transition: background-color 0.2s ease;
+    }
 
-.linkedin-btn:hover {
-  background-color: #70C9CF;
-}
-        
-  body {
-      background-color: #000000; /* black */
-      color: #FFF7AB;            /* bright yellow */
+    .linkedin-btn:hover {
+      background-color: #70C9CF;
+    }
+
+    .headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #8CF8FF;
+      margin-bottom: 25px;
+    }
+
+    body {
+      background-color: #000000;
+      color: #FFF7AB;
       margin: 0;
       padding: 0;
-      text-align: center;       /* center text horizontally */
-      font-family: "Courier New", Courier, monospace; /* making courier new font */
+      text-align: center;
+      font-family: "Courier New", Courier, monospace;
     }
 
     button {
-      background-color: #8CF8FF; /* bright cyan */
-      color: #000000;           /* black text */
+      background-color: #8CF8FF;
+      color: #000000;
       border: none;
-      padding: 15px 28px;       /* bigger buttons */
-      font-size: 20px;         /* bigger text */
-      margin: 0 10px;          /* spacing between buttons */
+      padding: 15px 28px;
+      font-size: 20px;
+      margin: 0 10px;
       cursor: pointer;
-      font-family: "Courier New", Courier, monospace; /* making courier new font */
+      font-family: "Courier New", Courier, monospace;
       font-weight: bold;
     }
 
     button:hover {
-        background-color: #70C9CF; /* medium cyan */
-        color: #000000;           /* white text */
-        font-weight: bold;
+      background-color: #70C9CF;
+      color: #000000;
+      font-weight: bold;
     }
 
-.hero-text {
-  margin-top: 60px;
-  max-width: 700px;
-  text-align: left;
-}
+    .hero-text {
+      margin-top: 60px;
+      max-width: 700px;
+      text-align: left;
+    }
 
-#typewriter {
-  font-weight: 500;
-}
-.cursor {
-  display: inline-block;
-  margin-left: 5px;
-  animation: blink 1s steps(2, start) infinite;
-}
+    #typewriter {
+      font-weight: 500;
+    }
 
-@keyframes blink {
-  to { visibility: hidden; }
-}
-.intro {
-  color: #8CF8FF;   /* bright cyan */
-}
-        
-.page {
-  display: flex;
-  height: 100vh;
-}
+    .cursor {
+      display: inline-block;
+      margin-left: 5px;
+      animation: blink 1s steps(2, start) infinite;
+    }
 
-.video-panel {
-  width: 40vw;   /* pulls everything left */
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
 
-.video-panel video {
-  position: absolute;
-  top: 50%;                 /* move down slightly */
-  left: 50%;
-  height: auto;
-  width: 100vh;
-  transform: translate(-50%, -50%) rotate(270deg);
-  transform-origin: center;
-  object-fit: contain;
-}
+    .intro {
+      color: #8CF8FF;
+    }
 
-.right-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 40px 60px 40px 20px;
- /* top right bottom left */
-}
+    .right-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 60px 40px 20px;
+    }
 
-.nav {
-  display: flex;
-  justify-content: flex-start;  /* <-- was center */
-  gap: 20px;
-}
-        
-</style>
+    .nav {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      align-items: center;
+    }
+  </style>
 </head>
-    
-<!-- <button type="button">About</button>
-<button type="button">Research</button>
-<button type="button">Outreach</button>
-<button type="button">CV</button>
- <h1 id="typewriter"></h1> -->
 
 <body>
   <div class="right-panel">
@@ -141,6 +122,8 @@
     </div>
 
     <div class="hero-text">
+      <img src="Headshot.jpg" alt="Alejandra Meza headshot" class="headshot">
+
       <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
       <p class="intro">
         Hi, I’m Alejandra. I grew up in Santa Cruz, CA and I’m currently a
@@ -165,6 +148,4 @@
     typeWriter();
   </script>
 </body>
-
-
 </html>
