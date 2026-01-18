@@ -49,8 +49,7 @@
 }
 
 .video-panel {
-  width: 35vw;
-  max-width: 520px;
+  width: 50vw;     /* left half of page */
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -60,9 +59,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 100vh;
+  height: 100%;
   width: auto;
-  transform: translate(-50%, -50%) rotate(90deg) scale(1.15);
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.9);
+  transform-origin: center;
   object-fit: contain;
 }
 
