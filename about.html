@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>About</title>
+    <style>
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8CF8FF;
+  color: #000000;
+  width: 60px;
+  height: 52px;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 2px;
+  font-family: "Courier New", Courier, monospace;
+  transition: background-color 0.2s ease;
+}
 
+.linkedin-btn:hover {
+  background-color: #70C9CF;
+}
+        
+  body {
+      background-color: #000000; /* black */
+      color: #FFF7AB;            /* bright yellow */
+      margin: 0;
+      padding: 0;
+      text-align: center;       /* center text horizontally */
+      font-family: "Courier New", Courier, monospace; /* making courier new font */
+    }
+
+    button {
+      background-color: #8CF8FF; /* bright cyan */
+      color: #000000;           /* black text */
+      border: none;
+      padding: 15px 28px;       /* bigger buttons */
+      font-size: 20px;         /* bigger text */
+      margin: 0 10px;          /* spacing between buttons */
+      cursor: pointer;
+      font-family: "Courier New", Courier, monospace; /* making courier new font */
+      font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #70C9CF; /* medium cyan */
+        color: #000000;           /* white text */
+        font-weight: bold;
+    }
+
+.hero-text {
+  margin-top: 60px;
+  max-width: 700px;
+  text-align: left;
+}
+
+#typewriter {
+  margin: 0 0 18px 0;
+  font-size: 56px;
+  letter-spacing: 1px;
+}
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+.intro {
+  color: #8CF8FF;   /* bright cyan */
+}
+        
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+.video-panel {
+  width: 40vw;   /* pulls everything left */
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-panel video {
+  position: absolute;
+  top: 50%;                 /* move down slightly */
+  left: 50%;
+  height: auto;
+  width: 100vh;
+  transform: translate(-50%, -50%) rotate(270deg);
+  transform-origin: center;
+  object-fit: contain;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 60px 40px 20px;
+ /* top right bottom left */
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;  /* <-- was center */
+  gap: 20px;
+}
+        
+</style>
+</head>
+    
+<!-- <button type="button">About</button>
+<button type="button">Research</button>
+<button type="button">Outreach</button>
+<button type="button">CV</button>
+ <h1 id="typewriter"></h1> -->
+
+<body>
+  <div class="right-panel">
+    <div class="nav">
+      <a href="index.html"><button>Home</button></a>
+      <a href="about.html"><button>About</button></a>
+      <a href="research.html"><button>Research</button></a>
+      <a href="outreach.html"><button>Outreach</button></a>
+      <a href="cv.html"><button>CV</button></a>
+
+      <a href="https://www.linkedin.com/in/alejandra-meza-a52316218"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="linkedin-btn"
+         aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             width="24" height="24" fill="#000000">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.1c.5-1 1.9-2.1 3.9-2.1 4.2 0 5 2.8 5 6.4V24h-4v-7.2c0-1.7 0-3.9-2.4-3.9s-2.8 1.8-2.8 3.8V24h-4V8.5z"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero-text">
+      <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
+      <p class="intro">
+        Hi, I’m Alejandra. I grew up in Santa Cruz, CA and I’m currently a
+        Physics & Astrophysics undergraduate at UC Berkeley working on
+        stellar dynamics and common envelope evolution in multiple-star systems.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const text = "About Me";
+    let i = 0;
+    const speed = 150;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typed").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    typeWriter();
+  </script>
+</body>
+
+
+</html>
