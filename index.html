@@ -7,7 +7,125 @@
       background-color: #000000; /* black */
       color: #FFF7AB;            /* bright yellow */
       margin: 0;
+      padding: 0;<!DOCTYPE html>
+<html>
+<head> 
+    <title>Alejandra Meza</title> 
+    <style>
+  body {
+      background-color: #000000; /* black */
+      color: #FFF7AB;            /* bright yellow */
+      margin: 0;
       padding: 0;
+      text-align: center;       /* center text horizontally */
+      font-family: "Courier New", Courier, monospace; /* making courier new font */
+    }
+
+    .nav {
+      padding: 20px;
+    }
+
+    button {
+      background-color: #8CF8FF; /* bright cyan */
+      color: #000000;           /* black text */
+      border: none;
+      padding: 15px 28px;       /* bigger buttons */
+      font-size: 20px;         /* bigger text */
+      margin: 0 10px;          /* spacing between buttons */
+      cursor: pointer;
+      font-family: "Courier New", Courier, monospace; /* making courier new font */
+      font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #70C9CF; /* medium cyan */
+        color: #000000;           /* white text */
+        font-weight: bold;
+    }
+
+#typewriter {
+  font-weight: 500;
+}
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+  padding: 60px;
+}
+
+.hero-video video {
+  width: 45vw;
+  max-width: 700px;
+  border-radius: 12px;
+}
+
+.hero-text {
+  text-align: left;
+  padding-left: 0px;
+}
+        
+</style>
+</head>
+    
+<!-- <button type="button">About</button>
+<button type="button">Research</button>
+<button type="button">Outreach</button>
+<button type="button">CV</button>
+ <h1 id="typewriter"></h1> -->
+
+<body>
+
+  <div class="nav">
+    <button type="button">About</button>
+    <button type="button">Research</button>
+    <button type="button">Outreach</button>
+    <button type="button">CV</button>
+  </div>
+
+<!-- <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1> -->
+
+<div class="hero">
+  <div class="hero-video">
+    <video autoplay muted playsinline preload="auto">
+      <source src="Exchange_website.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="hero-text">
+    <h1 id="typewriter"><span id="typed"></span><span class="cursor">|</span></h1>
+    <p>Undergraduate at UC Berkeley</p>
+  </div>
+</div>
+    
+<script>
+  const text = "Alejandra Meza";
+  let i = 0;
+  const speed = 75;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typed").textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  typeWriter();
+</script>
+    
+</body>
+</html>
       text-align: center;       /* center text horizontally */
       font-family: "Courier New", Courier, monospace; /* making courier new font */
     }
